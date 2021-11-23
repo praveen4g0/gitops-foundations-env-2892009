@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: gitops-foundations
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: gitops-foundations
+    weight: 100
+  wildcardPolicy: None
